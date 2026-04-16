@@ -1,0 +1,40 @@
+---
+title: "using-taxis-functions"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{using-taxis-functions}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup}
+library(ainara.martinez.m1ecap)
+```
+
+# Dataset
+Le package fournit la base de données `taxis_reduit`
+
+```{r}
+head(taxis_reduit)
+```
+## Example: resumé groupé
+```{r}
+summarise_taxis_by_group(
+  taxis_reduit,
+  group_var = "payment",
+  value_var = "total",
+  stat = "mean"
+)
+```
+
+## Example: plot
+
+```{r}
+plot_taxis_summary(
+  taxis_reduit,
+  group_var = "payment",
+  value_var = "total",
+  stat = "mean"
+)
+```
+
