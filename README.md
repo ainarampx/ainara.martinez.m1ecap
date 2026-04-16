@@ -17,7 +17,7 @@ Un fichier réduit de moins de 500 Ko a été créé et le script de préparatio
 - `plot_taxis_summary()` : produit un graphique en barres à partir du résumé groupé
 
 
-Le premier commit de ce répertoire a été effectué le 16/04/2026 à 09h39.
+Le premier commit de ce répertoire a été effectué le 16/04/2026 à 09h41.
 
 ## Exercice Git
 

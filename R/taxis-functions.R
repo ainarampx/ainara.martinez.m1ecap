@@ -1,3 +1,7 @@
+
+#' @importFrom rlang .data .env
+NULL
+
 #' Filtrer les trajets de taxi
 #'
 #' Filtre le jeu de données `taxis_reduit` selon le borough de prise en charge
@@ -17,11 +21,11 @@ filter_taxis <- function(data, pickup_borough = NULL, payment = NULL) {
   res <- data
 
   if (!is.null(pickup_borough)) {
-    res <- dplyr::filter(res, .data$pickup_borough == pickup_borough)
+    res <- dplyr::filter(res, .data$pickup_borough == .env$pickup_borough)
   }
 
   if (!is.null(payment)) {
-    res <- dplyr::filter(res, .data$payment == payment)
+    res <- dplyr::filter(res, .data$payment == .env$payment)
   }
 
   return(res)
