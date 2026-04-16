@@ -2,22 +2,22 @@
 % Please edit documentation in R/taxis-functions.R
 \name{summarise_taxis_by_group}
 \alias{summarise_taxis_by_group}
-\title{Résumer les données de taxi par groupe}
+\title{Résumer les donnees de taxi par groupe}
 \usage{
 summarise_taxis_by_group(data, group_var, value_var, stat = "mean")
 }
 \arguments{
-\item{data}{Un data frame, généralement `taxis_reduit`.}
+\item{data}{Un data frame, generalement `taxis_reduit`.}
 
-\item{group_var}{Nom de la variable de regroupement (chaîne de caractères).}
+\item{group_var}{Nom de la variable de regroupement (chaine de caracteres).}
 
-\item{value_var}{Nom de la variable numérique (chaîne de caractères).}
+\item{value_var}{Nom de la variable numerique (chaine de caracteres).}
 
-\item{stat}{Statistique à calculer : `"mean"`, `"median"` ou `"max"`.}
+\item{stat}{Statistique a calculer : `"mean"`, `"median"` ou `"max"`.}
 }
 \value{
 Un tibble avec une ligne par groupe.
 }
 \description{
-Calcule une statistique descriptive groupée pour une variable numérique.
+Calcule une statistique descriptive groupee pour une variable numerique.
 }

@@ -4,18 +4,18 @@ NULL
 
 #' Filtrer les trajets de taxi
 #'
-#' Filtre le jeu de données `taxis_reduit` selon le borough de prise en charge
+#' Filtre le jeu de donnees `taxis_reduit` selon le borough de prise en charge
 #' et le type de paiement.
 #'
-#' @param data Un data frame, généralement `taxis_reduit`.
-#' @param pickup_borough Une chaîne de caractères ou `NULL`.
-#' @param payment Une chaîne de caractères ou `NULL`.
+#' @param data Un data frame, generalement `taxis_reduit`.
+#' @param pickup_borough Une chaine de caracteres ou `NULL`.
+#' @param payment Une chaine de caracteres ou `NULL`.
 #'
-#' @return Un tibble / data frame filtré.
+#' @return Un tibble / data frame filtre.
 #' @export
 filter_taxis <- function(data, pickup_borough = NULL, payment = NULL) {
   if (!is.data.frame(data)) {
-    stop("`data` doit être un data frame.")
+    stop("`data` doit etre un data frame.")
   }
 
   res <- data
@@ -31,20 +31,20 @@ filter_taxis <- function(data, pickup_borough = NULL, payment = NULL) {
   return(res)
 }
 
-#' Résumer les données de taxi par groupe
+#' Résumer les donnees de taxi par groupe
 #'
-#' Calcule une statistique descriptive groupée pour une variable numérique.
+#' Calcule une statistique descriptive groupee pour une variable numerique.
 #'
-#' @param data Un data frame, généralement `taxis_reduit`.
-#' @param group_var Nom de la variable de regroupement (chaîne de caractères).
-#' @param value_var Nom de la variable numérique (chaîne de caractères).
-#' @param stat Statistique à calculer : `"mean"`, `"median"` ou `"max"`.
+#' @param data Un data frame, generalement `taxis_reduit`.
+#' @param group_var Nom de la variable de regroupement (chaine de caracteres).
+#' @param value_var Nom de la variable numerique (chaine de caracteres).
+#' @param stat Statistique a calculer : `"mean"`, `"median"` ou `"max"`.
 #'
 #' @return Un tibble avec une ligne par groupe.
 #' @export
 summarise_taxis_by_group <- function(data, group_var, value_var, stat = "mean") {
   if (!is.data.frame(data)) {
-    stop("`data` doit être un data frame.")
+    stop("`data` doit etre un data frame.")
   }
 
   if (!group_var %in% names(data)) {
@@ -56,7 +56,7 @@ summarise_taxis_by_group <- function(data, group_var, value_var, stat = "mean") 
   }
 
   if (!stat %in% c("mean", "median", "max")) {
-    stop("`stat` doit être l'un des suivants : 'mean', 'median', 'max'.")
+    stop("`stat` doit etre l'un des suivants : 'mean', 'median', 'max'.")
   }
 
   if (stat == "mean") {
@@ -77,15 +77,15 @@ summarise_taxis_by_group <- function(data, group_var, value_var, stat = "mean") 
   return(res)
 }
 
-#' Visualiser le résumé des taxis par groupe
+#' Visualiser le resume des taxis par groupe
 #'
-#' Crée un diagramme en barres à partir du résumé groupé produit par
+#' Cree un diagramme en barres a partir du resume groupe produit par
 #' `summarise_taxis_by_group()`.
 #'
-#' @param data Un data frame, généralement `taxis_reduit`.
-#' @param group_var Nom de la variable de regroupement (chaîne de caractères).
-#' @param value_var Nom de la variable numérique (chaîne de caractères).
-#' @param stat Statistique à calculer : `"mean"`, `"median"` ou `"max"`.
+#' @param data Un data frame, generalement `taxis_reduit`.
+#' @param group_var Nom de la variable de regroupement (chaine de caracteres).
+#' @param value_var Nom de la variable numerique (chaine de caracteres).
+#' @param stat Statistique a calculer : `"mean"`, `"median"` ou `"max"`.
 #'
 #' @return Un objet ggplot.
 #' @export

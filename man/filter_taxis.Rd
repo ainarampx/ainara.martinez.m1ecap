@@ -7,16 +7,16 @@
 filter_taxis(data, pickup_borough = NULL, payment = NULL)
 }
 \arguments{
-\item{data}{Un data frame, généralement `taxis_reduit`.}
+\item{data}{Un data frame, generalement `taxis_reduit`.}
 
-\item{pickup_borough}{Une chaîne de caractères ou `NULL`.}
+\item{pickup_borough}{Une chaine de caracteres ou `NULL`.}
 
-\item{payment}{Une chaîne de caractères ou `NULL`.}
+\item{payment}{Une chaine de caracteres ou `NULL`.}
 }
 \value{
-Un tibble / data frame filtré.
+Un tibble / data frame filtre.
 }
 \description{
-Filtre le jeu de données `taxis_reduit` selon le borough de prise en charge
+Filtre le jeu de donnees `taxis_reduit` selon le borough de prise en charge
 et le type de paiement.
 }

@@ -2,23 +2,23 @@
 % Please edit documentation in R/taxis-functions.R
 \name{plot_taxis_summary}
 \alias{plot_taxis_summary}
-\title{Visualiser le résumé des taxis par groupe}
+\title{Visualiser le resume des taxis par groupe}
 \usage{
 plot_taxis_summary(data, group_var, value_var, stat = "mean")
 }
 \arguments{
-\item{data}{Un data frame, généralement `taxis_reduit`.}
+\item{data}{Un data frame, generalement `taxis_reduit`.}
 
-\item{group_var}{Nom de la variable de regroupement (chaîne de caractères).}
+\item{group_var}{Nom de la variable de regroupement (chaine de caracteres).}
 
-\item{value_var}{Nom de la variable numérique (chaîne de caractères).}
+\item{value_var}{Nom de la variable numerique (chaine de caracteres).}
 
-\item{stat}{Statistique à calculer : `"mean"`, `"median"` ou `"max"`.}
+\item{stat}{Statistique a calculer : `"mean"`, `"median"` ou `"max"`.}
 }
 \value{
 Un objet ggplot.
 }
 \description{
-Crée un diagramme en barres à partir du résumé groupé produit par
+Cree un diagramme en barres a partir du resume groupe produit par
 `summarise_taxis_by_group()`.
 }
