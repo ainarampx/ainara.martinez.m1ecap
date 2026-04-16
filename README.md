@@ -35,3 +35,4 @@ git merge branch1
 git commit -m "commit D"
 ```
 
+Cette branche a été crée pour montrer un GitHub Pull Request merge.
